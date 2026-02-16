@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Resume</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #4e73df, #1cc88a);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .resume {
+        background: #fff;
+        max-width: 900px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 25px;
+        animation: slideDown 1s ease;
+    }
+
+    header h1 {
+        font-size: 28px;
+        color: #333;
+    }
+
+    header p {
+        color: #666;
+        margin-top: 5px;
+    }
+
+    section {
+        margin-bottom: 20px;
+        animation: fadeUp 1s ease forwards;
+        opacity: 0;
+    }
+
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.5s; }
+    section:nth-child(4) { animation-delay: 0.7s; }
+
+    h2 {
+        border-bottom: 2px solid #4e73df;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        color: #4e73df;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ul li {
+        margin-bottom: 8px;
+    }
+
+    .two-column {
+        display: flex;
+        gap: 20px;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+        from {transform: translateY(-20px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+        from {transform: translateY(20px); opacity: 0;}
+        to {transform: translateY(0); opacity: 1;}
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .two-column {
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 22px;
+        }
+
+        .resume {
+            padding: 20px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <header>
+        <h1>Shreesh</h1>
+        <p>Email: your@email.com | Phone: +91 XXXXX XXXXX | Location: City, India</p>
+    </header>
+
+    <section>
+        <h2>Profile</h2>
+        <p>Motivated and detail-oriented professional with skills in web development and data analytics. Passionate about learning new technologies and solving real-world problems.</p>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li><strong>B.Tech in Data Science</strong> – XYZ University (2023–2027)</li>
+            <li>12th – ABC College</li>
+        </ul>
+    </section>
+
+    <section class="two-column">
+        <div class="column">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Python, SQL</li>
+                <li>Data Analysis</li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Portfolio Website</strong> – Personal web portfolio</li>
+                <li><strong>Data Dashboard</strong> – Interactive analytics dashboard</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <ul>
+            <li><strong>Intern – Company Name</strong> (2025)</li>
+            <li>Worked on frontend development and database design.</li>
+        </ul>
+    </section>
+
+</div>
+
+</body>
+</html>
